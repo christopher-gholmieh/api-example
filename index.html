@@ -1,0 +1,118 @@
+<html lang="en">
+    <head>
+        <title>ChatGPT Clone</title>
+        <script defer type="module">
+            document.addEventListener("DOMContentLoaded", () => {
+                const chatMessages = document.getElementById("chatMessages");
+                const userInput = document.getElementById("userInput");
+                const sendButton = document.getElementById("sendButton");
+
+                const API_TOKEN = "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"
+
+                function appendMessage(message) {
+                    if (message.trim() === "") { return };
+                }
+
+                sendButton.addEventListener("click", () => {
+                    appendMessage(userInput.value);
+                });
+
+                userInput.addEventListener("keypress", (event) => {
+                    if (event.key === "Enter") {
+                        appendMessage(userInput.value);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="chat-container">
+            <div class="chat-header">ChatGPT Clone</div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input-container">
+                <input type="text" id="userInput" placeholder="Type a message..." />
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+    </body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343541;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .chat-container {
+            width: 90%;
+            max-width: 600px;
+            height: 80vh;
+            background-color: #444654;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-header {
+            background-color: #202123;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid #444654;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chat-input-container {
+            display: flex;
+            padding: 0px;
+            background-color: #202123;
+            border-top: 1px solid #444654;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .chat-input-container input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background-color: #40414F;
+            color: white;
+            font-size: 16px;
+        }
+
+        .chat-input-container button {
+            margin-left: 10px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #19C37D;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .chat-input-container button:hover {
+            background-color: #16A364;
+        }
+    </style>
+</html>
+
