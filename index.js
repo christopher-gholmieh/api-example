@@ -21,4 +21,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         82: "Heavy rain showers",
         95: "Thunderstorms",
     };
+
+    try {
+        // Code:
+        
+    } catch (error) {
+        console.log("Error: ", error)
+    }
 });
