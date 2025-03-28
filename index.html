@@ -1,0 +1,116 @@
+<!-- HTML: -->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Title: -->
+        <title>API Example</title>
+
+        <!-- Viewport: -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Set: -->
+        <meta charset="utf-8">
+
+        <!-- Fonts: -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Style: -->
+        <style>
+            /* Wildcard: */
+            * {
+                /* Box - Sizing: */
+                box-sizing: border-box;
+
+                /* Padding: */
+                padding: 0;
+
+                /* Margin: */
+                margin: 0;
+            }
+
+            /* Container: */
+            .container {
+                /* Height: */
+                min-height: 100vh;
+                
+                /* Width: */
+                min-width: 100vh;
+            }
+
+            /* Padded - Container: */
+            .padded-container {
+                /* Padding: */
+                padding-bottom: 60px;
+                padding-top: 60px;
+
+                /* Margin: */
+                margin-right: auto;
+                margin-left: auto;
+
+                /* Width: */
+                width: 100%;
+
+                /* Max - Width: */
+                max-width: 1440px;
+            }
+
+            /* Title - Container: */
+            .title-container {
+                /* Display: */
+                display: flex;
+
+                flex-direction: column;
+            }
+
+            .title-container p {
+                /* Font - Family: */
+                font-family: "Poppins";
+
+                /* Font - Weight: */
+                font-weight: 500;
+
+                /* Font - Size: */
+                font-size: 40px
+            }
+
+            #today-temperature, #today-weather {
+                /* Font - Family: */
+                font-family: "Poppins";
+
+                /* Margin: */
+                margin-top: 40px;
+
+                /* Font - Size: */
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="padded-container">
+                <div class="title-container">
+                    <p>API Weather Example</p>
+
+                    <hr />
+                </div>
+
+                <p id="today-temperature">
+                    Today's temperature: X
+                </p>
+
+                <p id="today-weather">
+                    Today's weather: X
+                </p>
+            </div>
+        </div>
+
+        <!-- Module: -->
+        <script type="module" src="./index.js">
+
+        </script>
+    </body>
+</html>
